@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 // ----> Import PdfJsViewerModule here
 import { PdfJsViewerModule } from 'ng2-pdfjs-viewer';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PdfViewerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+<style>
+  button {
+  display: inline-block;
+  padding: 15px 45px;
+  font-size: 24px;
+  font-family: "Bitter",serif;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+button:focus {
+  outline: none
+}
+</style>
+
+<div [hidden]="!isPdfLoaded" style="height: 600px">
+  <ng2-pdfjs-viewer #inlinePdfViewer></ng2-pdfjs-viewer>
+</div>
+<button (click)="loadAndDisplayPdf()" style="background-color:cadetblue;" >Load/Hide Inline PDF</button>
+<!-- <button (click)="openPdf()" style="background-color: orange" >Open PDF in new tab</button>
+<button (click)="changePdf()" style="float: right; background-color: green">Click to change PDF url</button>
+
+<br />
+<ng2-pdfjs-viewer #externalPdfViewer [externalWindow]="true"></ng2-pdfjs-viewer>
+<div style="position:fixed; left:845px; width: 825px; height: 400px">
+  <ng2-pdfjs-viewer #embeddedPdfViewer pdfSrc="pdf-sample.pdf"></ng2-pdfjs-viewer>
+</div>
+<div style="position:absolute; width: 825px; height: 900px">
+  <ng2-pdfjs-viewer pdfSrc="pdf-sample.pdf">
+  </ng2-pdfjs-viewer>
+</div> -->
+<router-outlet></router-outlet>
